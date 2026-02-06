@@ -9,13 +9,13 @@ Algunas características:
 * Particiones espaciales para detección de colisiones partícula-partícula y partícula-muro (uniform grid).
 * Control de algunos parámetros de simulación en tiempo real.
 
-# Compilación:
+## Compilación:
 
 ```bash
 make
 ```
 
-# Ejecución:
+## Ejecución:
 
 ```bash
 ./exec
