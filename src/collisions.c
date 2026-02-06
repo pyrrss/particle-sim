@@ -108,7 +108,6 @@ void collisions_resolve_particle_wall_segment(Particle *p, WallSegment *segment)
     }
 
     // -- colisión --
-    // TODO: seguir aquí con resolucion de colision jejeje
     float distance = sqrt(distance_sqr);
     float radius_total = p->radius + segment->thickness / 2.0f;
     float overlap = radius_total - distance;

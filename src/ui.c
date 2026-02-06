@@ -17,7 +17,6 @@ void ui_handle(SimulationParams *simulation_params, UIActions *ui_actions, Recta
     float radius_label_width = MeasureText(radius_label_text, UI_FONT_SIZE);
     Rectangle radius_label_rect = {10, 40, radius_label_width, 30};
     Rectangle radius_slider_rect = {radius_label_width + 40, 40, panel_rect->width / 2 , 30};
-    // TODO: de aquí tengo que sacar el valor del radio y actualizar params
     GuiLabel(radius_label_rect, radius_label_text);
     GuiSlider(radius_slider_rect, "1.0", "50.0", &simulation_params->particle_radius, 1.0f, 50.0f);
     

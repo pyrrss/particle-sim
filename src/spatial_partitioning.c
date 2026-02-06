@@ -94,14 +94,11 @@ void sp_insert_wall_segment(SpatialPartitioning *sp, WallSegment *segment)
     cell_y_start = Clamp(cell_y_start, 0, sp->grid_height - 1);
     cell_y_end = Clamp(cell_y_end, 0, sp->grid_height - 1);
     
-    // TODO: checkear redimension
-
     // se recorren celdas intermedias y se va insertando segmento en cada una
     for (int cell_x = cell_x_start; cell_x <= cell_x_end; cell_x++)
     {
         for (int cell_y = cell_y_start; cell_y <= cell_y_end; cell_y++)
         {
-            // NOTE: no entiendo bien esto, checkear luego
             int cell_index = cell_x + cell_y * sp->grid_width;
             int reference_index = sp->reference_count++;
             
@@ -252,7 +249,6 @@ void sp_check_wall_segment_neighbors(SpatialPartitioning *sp, Particle *particle
                 WallSegment *segment = &simulation_state->segments[segment_index];
                 
                 // checkeo/resolución de colisión partícula-segmento
-                // TODO: implementar res. partícula-segmento
                 collisions_resolve_particle_wall_segment(particle, segment);
                 reference_index = sp->reference_next[reference_index];
             }

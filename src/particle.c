@@ -46,9 +46,6 @@ void particle_spawn(SimulationState* simulation_state, Vector2 position)
     
 }
 
-// TODO: por ahora se está aumentando la cte. de gravedad para que se vea bien visualmente,
-// pero si busco realismo, deberia mantener la cte. en 9.81f y ver una forma de definir una escala
-// ej: 1m = 100px
 void particle_update(Particle* p, SimulationParams* params)
 {
     // se actualizan parametros de particula en base a params de simulación
@@ -94,9 +91,6 @@ void particle_render(Particle* p)
     // NOTE: las partículas se tratan internamente como círculos
     // pero se renderizan como cuadrados para rendimiento;
     // hacer esto mejoró MUCHO el rendimiento
-
-    // TODO: investigar sobre batch rendering; idea general es mantener
-    // una textura como buffer y renderizar todas las partículas en el buffer
 
     float k = 0.9f; // factor de escala
     int side = (int) (2 * p->radius * k);

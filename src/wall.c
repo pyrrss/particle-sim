@@ -17,8 +17,6 @@ void wall_init(Wall *wall)
 
 void wall_add_point(Wall *wall, Vector2 point, SimulationState *simulation_state)
 {
-    // TODO: no se si esto provoca algun bug
-
     // -- walls --
     if (wall->count >= wall->capacity)
     {
